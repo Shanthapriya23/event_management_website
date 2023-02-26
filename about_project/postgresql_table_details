@@ -1,0 +1,5 @@
+DATABASE USED : POSTGRESQL
+there are totally 3 tables used for this event management project namely:
+1.events table
+2.registered table
+3.user_event_booking table
