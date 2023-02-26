@@ -1,0 +1,22 @@
+######################code for creating registred table with following column:
+1.reg_id
+2.name
+3.email
+4.password
+5.user_type(admin/user)
+
+################################################
+-- public.registered definition
+
+-- Drop table
+
+-- DROP TABLE public.registered;
+
+CREATE TABLE public.registered (
+	reg_id serial4 NOT NULL,
+	"name" varchar(25) NOT NULL,
+	email varchar(25) NOT NULL,
+	"password" varchar NOT NULL,
+	user_type varchar NOT NULL,
+	CONSTRAINT registered_pkey PRIMARY KEY (reg_id)
+);
