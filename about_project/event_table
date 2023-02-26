@@ -1,0 +1,27 @@
+#####################code for creating the events table with the following columns:
+1.event_title
+2.event_genre
+3.event_venue
+4.date
+5.time
+6.description
+7.event_id
+##################################
+
+
+-- public.events definition
+
+-- Drop table
+
+-- DROP TABLE public.events;
+
+CREATE TABLE public.events (
+	event_title varchar(50) NOT NULL,
+	event_genre varchar(40) NOT NULL,
+	event_venue varchar(50) NOT NULL,
+	"date" date NOT NULL,
+	"time" time NOT NULL,
+	description varchar(100) NOT NULL,
+	event_id serial4 NOT NULL,
+	CONSTRAINT events_pkey PRIMARY KEY (event_id)
+);
