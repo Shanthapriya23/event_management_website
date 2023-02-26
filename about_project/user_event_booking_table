@@ -1,0 +1,27 @@
+#######################code for creating user_event_booking table with the following columns:
+1.bookin_id
+2.user_id
+3.event_no
+4.booking_date
+#################################3
+
+
+-- public.user_event_booking definition
+
+-- Drop table
+
+-- DROP TABLE public.user_event_booking;
+
+CREATE TABLE public.user_event_booking (
+	booking_id serial4 NOT NULL,
+	user_id int4 NOT NULL,
+	event_no int4 NOT NULL,
+	booking_date timestamp NOT NULL DEFAULT now(),
+	CONSTRAINT user_event_booking_pkey PRIMARY KEY (booking_id)
+);
+
+
+-- public.user_event_booking foreign keys
+
+ALTER TABLE public.user_event_booking ADD CONSTRAINT fk_event_no FOREIGN KEY (event_no) REFERENCES public.events(event_id);
+ALTER TABLE public.user_event_booking ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES public.registered(reg_id);
